@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>How explicit is the Explicit Formula?</title>
+
+    <meta name="description" content="How explicit is the Explicit Formula?">
+    <meta name="author" content="Barry Mazur and William Stein">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+});
+    </script>
+    <script type="text/javascript" src="mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+    <script type="text/javascript" src="jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery-ui/js/jquery-ui.min.js"></script>
+
+
+    <link rel="stylesheet" href="jquery/jquery-ui/css/humanity/jquery-ui.css">
+
+    <link rel="stylesheet" href="deck/core/deck.core.css">
+    <link rel="stylesheet" href="deck/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="deck/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="deck/extensions/status/deck.status.css">
+    <link rel="stylesheet" href="deck/extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="deck/extensions/scale/deck.scale.css">
+    <link rel="stylesheet" href="deck/themes/style/salvus.css">
+    <link rel="stylesheet" href="deck/themes/transition/fade.css">
+
+    <script src="deck/modernizr.custom.js"></script>
+    <script src="deck/core/deck.core.js"></script>
+
+    <script src="deck/extensions/hash/deck.hash.js"></script>
+    <script src="deck/extensions/menu/deck.menu.js"></script>
+    <script src="deck/extensions/status/deck.status.js"></script>
+    <script src="deck/extensions/navigation/deck.navigation.js"></script>
+    <script src="deck/extensions/scale/deck.scale.js"></script>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+
+  </head>
+
+  <body class="deck-container">
+
+    <section>
+      <h2>$p$-adic BSD for GL<sub>2</sub>-type Abelian Varieties</h2>
+      <br>
+      <h3 class="center">William Stein (joint work with J. Balakrishnan and S. Muller)</h3>
+      <br>
+      <h4 class="well">
+	Notes for a talk at the AMS Special Session on
+	$L$-functions and Arithmetic Geometry, II, San Diego, 2013.
+      </h4>
+      <br><br><br>
+      <div class="center lighten">
+	(Change slides with left and right arrows.  Type "m" to see all slides.)
+      </div>
+
+    </section>
+
+    <section>
+	<div class="pull-right lighten small draggable">
+	  $a_p(E) = p+1-\#E(\mathbf{F}_p)$
+	</div>
+
+	<div class="pull-right lighten small draggable">
+	  $\text{Sha}_E = \text{ker}(H^1(\mathbf{Q},E) \to \oplus_v H^1(\mathbf{Q}_v,E))$
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+
+	<div class="pull-right lighten small draggable">
+	  $c_p = \#\Phi_{E,p}(\mathbf{F}_p)$
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+
+	<h2>BSD for elliptic curve E over Q</h2>
+	<div>
+	  <div class='eq'>
+	    L(E,s) = \prod_{p\nmid N}\frac{1}{1-a_p p^{-s} + p^{1-2s}} \cdot \prod_{p\mid N}\frac{1}{1-a_p p^{-s}}
+	  </div>
+
+	  <div class="well">
+	    <div class="pull-right">
+	      <img src="pics/bsd.png" class="draggable"><br>
+	      <img width=128 src="pics/kolyvagin.png" class="draggable">
+	    </div>
+
+	    <h5>Conjecture (Birch and Swinnerton-Dyer):</h5>
+	    <ul>
+	      <li> (r) $\text{ord}_{s=1} L(E,s) = \text{ rank } E \quad (=r)  $ </li>
+	      <li> (f)
+		$\displaystyle	\frac{L^{(r)}(E,1)}{r!} = \frac{\prod c_p \cdot \text{Reg}_E \cdot \Omega_E \cdot \#\text{Sha}_E}{\# E(\mathbf{Q})_{\text{tor}}^2} $
+	    </ul>
+
+	    <h5>Theorem (Kolyvagin, Wiles, Gross-Zagier, ...):</h5>
+	    <ul>
+	      <li> $\text{ord}_{s=1} L(E,s)\leq 1$ implies (r) true; moreover, (f) can be decided in any particular case <span class="lighten">and is true when $N\leq 5000$ [&mdash;, Miller-Stoll, ...]</span></li>
+	      <li> $\text{ord}_{s=1} L(E,s)\leq 3$ implies (r) can be decided by computer in any particular case; however, (f) is not known in even a single case (!)</li>
+	      <li> $\text{ord}_{s=1} L(E,s)\geq 4$ implies nothing; in fact, (r) is not known in a single case (!)</li>
+	    </ul>
+	  </div>
+	</div>
+    </section>
+
+    <section>
+      <div class="pull-right lighten small draggable">
+	&nbsp;&nbsp;&nbsp;&nbsp;Modularity Theorem: Abelian variety of $\text{GL}_2$-type if and only if isog to product of $A_f$.
+      </div>
+      <div class="pull-right lighten small draggable">
+	$S_2(\Gamma_0(N)) = \{ f:\mathfrak{h} \to \mathbf{C} \text{ with } f(\frac{az+b}{cz+d}) = (cz+d)^k f(z) ....\}$
+      </div>
+
+      <h2>BSD for GL<sub>2</sub>-type Abelian Varieties</h2>
+
+      <div class="row">
+	<div class="span4"></div>
+	<div class="well span7">newform    $f = \sum a_n q^n \in S_2(\Gamma_0(N))$</div>
+      </div>
+      <div class="row">
+	<div class="span7 well">
+	  $L(f,s) = \sum a_n n^{-s}$<br>
+	  $L(A_f,s) = \prod L(f^{\sigma},s)$
+	</div>
+	<div class="span7 pull-right well">
+	  $A_f = J_0(N) / \text{Ann}_{\mathbf{T}}(f) J_0(N)$
+	  <br>
+	  abelian variety of dim $[\mathbf{Q}(\ldots a_n\ldots):\mathbf{Q}]$
+	</div>
+      </div>
+      <br>
+      <div class="well">
+	<div class="pull-right lighten">My Ph.D. thesis: compute these invariants<br><img src="pics/243.png" width=200></div>
+	<h5>Conjecture (Birch and Swinnerton-Dyer):</h5>
+	<ul>
+	  <li> (r) $\text{ord}_{s=1} L(A_f,s) = \text{ rank } A \quad (=r)  $ </li>
+	  <li> (f)
+	    $\displaystyle	\frac{L^{(r)}(A_f,1)}{r!} = \frac{\prod c_p \cdot \text{Reg}_{A_f} \cdot \Omega_{A_f} \cdot \#\text{Sha}_{A_f}}{\# A_f(\mathbf{Q})_{\text{tor}}\cdot \# A_f^{\vee}(\mathbf{Q})_{\text{tor}}} $
+	</ul>
+
+	<h5>Theorem (Kolyvagin, Wiles, Gross-Zagier, ...):</h5>
+	<ul>
+	  <li> $\text{ord}_{s=1} L(E,s)\leq 1$ implies (r); (f) in principle but <em>not</em> practice</li>
+	  <li> $\text{ord}_{s=1} L(E,s)\leq 3$ implies (r) can be decided by computer in principle, not practice</li>
+	</ul>
+
+      </div>
+
+    </section>
+
+    <section>
+      <h2>$p$-adic BSD for $E$</h2>
+    </section>
+
+    <section>
+      <h2>$p$-adic BSD for $A_f$</h2>
+    </section>
+
+    <section>
+      <h2>Evidence for $p$-adic BSD for $A_f$</h2>
+    </section>
+
+    <section>
+      <h2>What Next</h2>
+    </section>
+
+  </body>
+
+</html>

@@ -1,0 +1,58 @@
+.well {
+    padding: 12px !important;
+    margin: 5px !important;
+    box-shadow: 5px 5px 3px #ddd;
+}
+
+h3 {
+    margin-top: 15px !important;
+}
+
+.center {
+    text-align:center;
+}
+
+.display {
+    margin-top:1em !important;
+    margin-bottom:1em !important;;
+}
+
+.eq {
+    padding:.5em !important;
+}
+
+.hide {
+    visibility:none;
+}
+
+.lighten {
+    color: #666;
+}
+
+.smallish {
+    font-size:16pt !important;
+}
+
+.small {
+    font-size:12pt !important;
+}
+
+.smaller {
+    font-size:18pt !important;
+}
+
+.larger {
+    font-size:26pt !important;
+}
+
+.draggable {
+    box-shadow: 2px 2px 1px #bbb;
+}
+
+.draggable:hover {
+    border: 1px dashed black;
+}
+
+td, th {
+    text-align:center !important;
+}

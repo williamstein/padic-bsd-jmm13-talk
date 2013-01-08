@@ -1,0 +1,10 @@
+[x] make table of aplist and zeros as sobj's for our curves.  aplists to 10^8 and first 10,000 zeros.
+     -- running on 01salvus right now.
+
+[ ] explicit.pyx -- compute all relevant plots based on those tables
+    of aplists.  Make sure the plots do not have too many data points
+     *displayed*.
+
+[ ] figure out how to display them nicely in the presentation.
+
+[ ] do the animations.
