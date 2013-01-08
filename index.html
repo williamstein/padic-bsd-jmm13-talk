@@ -98,7 +98,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
 	    <ul>
 	      <li> (r) $\text{ord}_{s=1} L(E,s) = \text{ rank } E \quad (=r)  $ </li>
 	      <li> (f)
-		$\displaystyle	\frac{L^{(r)}(E,1)}{r!} = \frac{\prod c_p \cdot \text{Reg}_E \cdot \Omega_E \cdot \#\text{Sha}_E}{\# E(\mathbf{Q})_{\text{tor}}^2} $
+		$\displaystyle	\frac{L^{(r)}(E,1)}{r!} = \frac{\text{Reg}_E \cdot \Omega_E \cdot \#\text{Sha}_E \cdot \prod c_p}{\# E(\mathbf{Q})_{\text{tor}}^2} $
 	    </ul>
 
 	    <h5>Theorem (Kolyvagin, Wiles, Gross-Zagier, ...):</h5>
@@ -143,7 +143,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
 	<ul>
 	  <li> (r) $\text{ord}_{s=1} L(A_f,s) = \text{ rank } A \quad (=r)  $ </li>
 	  <li> (f)
-	    $\displaystyle	\frac{L^{(r)}(A_f,1)}{r!} = \frac{\prod c_p \cdot \text{Reg}_{A_f} \cdot \Omega_{A_f} \cdot \#\text{Sha}_{A_f}}{\# A_f(\mathbf{Q})_{\text{tor}}\cdot \# A_f^{\vee}(\mathbf{Q})_{\text{tor}}} $
+	    $\displaystyle	\frac{L^{(r)}(A_f,1)}{r!} = \frac{\text{Reg}_{A_f} \cdot \Omega_{A_f} \cdot \#\text{Sha}_{A_f}\cdot \prod c_p}{\# A_f(\mathbf{Q})_{\text{tor}}\cdot \# A_f^{\vee}(\mathbf{Q})_{\text{tor}}} $
 	</ul>
 
 	<h5>Theorem (Kolyvagin, Wiles, Gross-Zagier, ...):</h5>
@@ -153,19 +153,63 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
 	</ul>
 
       </div>
+    </section>
+
+    <section>
+      <div class="pull-right lighten small draggable">
+	$E$ is an elliptic curve defined over $\mathbf{Q}$.
+      </div>
+
+      <h2>$p$-adic BSD for E</h2>
+      <div class="pull-right smallish">
+	<ul>
+	  <li>interpolates special values $L(E,\chi,1)/\Omega_{E,\chi}$</li>
+	  <li>compute using classical <em>or</em> overconvergent modular symbols</li>
+	  <li>generalizes to multiplicative reduction</li>
+	</ul>
+      </div>
+      <div>
+	$p$ good ordinary prime
+	<div class="eq">
+	  \mathcal{L}_p(E,T) = \text{$p$-adic $L$-series} \in \mathbf{Q}_p[[T]]
+	</div>
+      </div>
+      <div class="well">
+	<h5>Conjecture (Mazur, Tate, Teitelbaum):</h5>
+	<ul>
+	  <li> (r) $\text{ord}_{T} \mathcal{L}_p(E,T) = \text{rank } E(\mathbf{Q})$</li>
+	  <li> (f) $\frac{\mathcal{L}^{(r)}(E,0)}{r!} = \frac{\text{Reg}_p(E) \cdot \#\text{Sha}_E \cdot \prod_{\ell\mid N} c_\ell}{\# E(\mathbf{Q})_{\text{tor}}^2} \cdot \epsilon_p$ 
+	</ul>
+
+	<div class="pull-right lighten smallish">
+	  Hypothesis that $\text{Reg}_p(E)\neq 0$ is serious;<br>easy to check
+	  in practice if $E(\mathbf{Q})$ is known.
+	</div>
+	<h5>Theorem (Kato, Schneider, Iwasawa, ...):</h5>
+	<ul>
+	  <li> rank $E \leq \text{ord}_{T} \mathcal{L}_p(E,T)$, </li>
+	  <li> if $\text{Reg}_p(E)\neq 0$ and Galois image big, then actual $\#\text{Sha}_E$ divides the conjectural order, up to a $p$-adic unit</li>
+	</ul>
+
+      </div>
 
     </section>
 
     <section>
-      <h2>$p$-adic BSD for $E$</h2>
-    </section>
+	<div class="pull-right lighten smallish">
+	  $A_f$ is simple abelian variety quotients of $J_0(N)$
+	</div>
 
-    <section>
       <h2>$p$-adic BSD for $A_f$</h2>
+
+
     </section>
+
 
     <section>
       <h2>Evidence for $p$-adic BSD for $A_f$</h2>
+
+
     </section>
 
     <section>
