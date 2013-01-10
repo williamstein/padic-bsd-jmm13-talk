@@ -28,7 +28,6 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
     <link rel="stylesheet" href="deck/extensions/navigation/deck.navigation.css">
     <link rel="stylesheet" href="deck/extensions/status/deck.status.css">
     <link rel="stylesheet" href="deck/extensions/hash/deck.hash.css">
-    <link rel="stylesheet" href="deck/extensions/scale/deck.scale.css">
     <link rel="stylesheet" href="deck/themes/style/salvus.css">
     <link rel="stylesheet" href="deck/themes/transition/fade.css">
 
@@ -39,7 +38,8 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
     <script src="deck/extensions/menu/deck.menu.js"></script>
     <script src="deck/extensions/status/deck.status.js"></script>
     <script src="deck/extensions/navigation/deck.navigation.js"></script>
-    <script src="deck/extensions/scale/deck.scale.js"></script>
+<!--    <link rel="stylesheet" href="deck/extensions/scale/deck.scale.css">
+   <script src="deck/extensions/scale/deck.scale.js"></script>-->
 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
@@ -142,15 +142,15 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
 	<div class="pull-right"><img src="pics/243.png" width=200></div>
 	<h5>Conjecture (Birch and Swinnerton-Dyer):</h5>
 	<ul>
-	  <li> (r) $\text{ord}_{s=1} L(A_f,s) = \text{ rank } A \quad (=r)  $ </li>
+	  <li> (r) $\text{ord}_{s=1} L(A_f,s) = \text{ rank } A_f \quad (=r)  $ </li>
 	  <li> (f)
 	    $\displaystyle	\frac{L^{(r)}(A_f,1)}{r!} = \frac{\text{Reg}_{A_f} \cdot \Omega_{A_f} \cdot \#\text{Sha}(A_f)\cdot \prod c_p}{\# A_f(\mathbf{Q})_{\text{tor}}\cdot \# A_f^{\vee}(\mathbf{Q})_{\text{tor}}} $
 	</ul>
 
 	<h5>Theorem (Kolyvagin, Wiles, Gross-Zagier, ...):</h5>
 	<ul>
-	  <li> $\text{ord}_{s=1} L(E,s)\leq 1$ implies (r); (f) in principle but <em>not</em> practice</li>
-	  <li> $\text{ord}_{s=1} L(E,s)\leq 3$ implies (r) can be decided by computer in principle, not practice</li>
+	  <li> $\text{ord}_{s=1} L(f,s)\leq 1$ implies (r); (f) in principle but <em>not</em> practice</li>
+	  <li> $\text{ord}_{s=1} L(f,s)\leq 3$ implies (r) can be decided by computer in principle, not practice (in general)</li>
 	</ul>
 
       </div>
@@ -336,7 +336,14 @@ $f=\sum a_n q^n$ is a newform in $S_2(\Gamma_0(N))$
 
     </section>
 
+    <section>
+      <img src="pics/gens.png" class="pull-right"><br>
+      <h2>Numerical Evidence</h2>
+      <img src="pics/67.png">
+      
 
+    </section>
+    
     <section>
       <h2>Ideas for future work</h2>
       <ol>
