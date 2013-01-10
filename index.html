@@ -230,7 +230,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
 	Let $X$ be the set of 1,534,422 pairs $(E,p)$, where $E$ is a non-CM elliptic curve
 	over $\mathbf{Q}$ with rank at least 2 and conductor 30,000, and $p\geq 5$ is a good ordinary
 	prime for $E$ with $p < 1000$ such that the mod $p$ representation is surjective.
-	Then $X(E/\mathbf{Q})[p] = 0$ for each of the pairs in $X$.
+	Then $\text{Sha}(E/\mathbf{Q})[p] = 0$ for each of the pairs in $X$, as predicted by BSD.
       </div>
       <br>
       <h4>Proof uses:</h4>
@@ -252,14 +252,14 @@ $f=\sum a_n q^n$ is a newform in $S_2(\Gamma_0(N))$
 
       <h2>$p$-adic BSD for $A_f$</h2>
 
-      <h4 class="lighten">The Main Issue: What is $\mathcal{L}_p(A_f, T) = \prod \mathcal{L}_p(f^{\sigma},T) $?</h4>
+      <div>The Main Issue &mdash; what is $ \mathcal{L}_p(A_f, T) = \prod \mathcal{L}_p(f^{\sigma},T) $?</div>
 
       <div>
 	<ul>
 	  <li>
 	    Defining $\mathcal{L}_p(f^\sigma,T)$ tricky; harder than in the elliptic curve case to choose a period.
 	  <li> Requires <span class="purple">choosing</span> a (Shimura) period for each $f^{\sigma}$, that is, a complex number $\Omega^+_{f^{\sigma}}$
-	    such that $L(f^{\sigma},1)/\Omega_{f^{\sigma}}$ is algebraic (and for twists). Individual $\Omega_{f^{\sigma}}$ are <span class="purple">not canonical</span>! </li>
+	    such that $L(f^{\sigma},1)/\Omega_{f^{\sigma}}$ is algebraic (and for twists). Individual $\Omega_{f^{\sigma}}$ are <span class="purple">not canonical</span>! But who cares...</li>
 	  <li> <span class="bold">Theorem (&mdash;)</span> Can choose $\Omega_{f^{\sigma}}$ such that $\prod \Omega_{f^{\sigma}} = \Omega_{A_f}$, which is canonical (the Neron period)</li>
 	</ul>
       </div>
@@ -304,7 +304,7 @@ $f=\sum a_n q^n$ is a newform in $S_2(\Gamma_0(N))$
       <div class="row">
 	<div class="span10 well">
 	  <h5>Numerical Evidence:</h5>
-	  Consider 16 $A_f=\text{Jac}(C)$ of rank 2 and dim 2 from <em>Empirical evidence for the Birch and Swinnerton-Dyer
+	  16 $A_f=\text{Jac}(C)$ of rank 2 and dim 2 from <em>Empirical evidence for the Birch and Swinnerton-Dyer
 	    conjectures for modular Jacobians of genus 2 curves</em>.  Assume Sha($A_f$) is 2-torsion.
 	  <br><br>
 	  <span class="bold">Theorem:</span> The above conjecture is true to at least 4 $p$-adic digits for each $5 < p < 100$ such that $C$ has an odd degree model over $\mathbf{Q}_p$.
@@ -349,10 +349,10 @@ $f=\sum a_n q^n$ is a newform in $S_2(\Gamma_0(N))$
       <ol>
 	<li>Verify that Sha(389a)[16,231]=0 (<span class="purple">overconvergent</span> modular symbols).</li>
 	<li>Generalize elliptic curve computations to <span class="purple">supersingular primes</span>; basic theory and implementations in place, but algorithms and code are way too slow.</li>
-	<li>Compute <span class="purple">Heegner points</span> and show that Sha($A_f$)=0 for some abelian varieties $A_f$ of rank $0$.</li>
+	<li>Compute <span class="purple">Heegner points</span> and show that Sha($A_f$)=0 for some abelian varieties $A_f$ with $\text{ord } L(f,s)\leq 1$.</li>
 	<li>Extend [&mdash;-Wuthrich] to $A_f$, and show that <span class="purple">Sha($A_f$)[$p$]=0</span> for many $p$.</li>
 	<li>Generalize conjectures <span class="purple">and data</span> to quotients of $J_1(N)$.</li>
-	<li>Make computation of $p$-adic heights on $A_f$ not depend on <span class="purple">Magma</span>.</li>
+	<li>Most importantly, make computation of $p$-adic heights on $A_f=\text{Jac}(C)$ not depend on <span class="purple">Magma</span>.</li>
       </ol>
     </section>
 
