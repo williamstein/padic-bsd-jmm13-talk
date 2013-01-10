@@ -54,5 +54,14 @@ h3 {
 }
 
 td, th {
-    text-align:center !important;
+    padding-left: 1em !important;
+    text-align:left !important;
+}
+
+.bold {
+    font-weight:bold !important;
+}
+
+.purple {
+    color:purple !important;
 }
